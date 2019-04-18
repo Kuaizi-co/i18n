@@ -1,0 +1,21 @@
+{
+  "name": "@kuaizi/vue-i18n-loader",
+  "version": "1.0.0",
+  "description": "i18n-loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "i18n",
+    "i18n-loader"
+  ],
+  "author": "tomieric <tomieric@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@kuaizi/i18n-share-utils": "^1.0.0"
+  }
+}
