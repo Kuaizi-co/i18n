@@ -9,6 +9,11 @@
     "categories": [
         "Keymaps"
     ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Kuaizi-co/i18n.git",
+      "directory": "packages/@kuaizi/i18n-vsc"
+    },
     "contributes": {
         "keybindings": [
             {

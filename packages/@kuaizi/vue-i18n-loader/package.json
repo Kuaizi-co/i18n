@@ -12,6 +12,11 @@
   ],
   "author": "tomieric <tomieric@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kuaizi-co/i18n.git",
+    "directory": "packages/@kuaizi/vue-i18n-loader"
+  },
   "publishConfig": {
     "access": "public"
   },

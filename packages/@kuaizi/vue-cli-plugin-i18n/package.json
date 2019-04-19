@@ -8,6 +8,11 @@
   },
   "keywords": [],
   "author": "tomieric <tomieric@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kuaizi-co/i18n.git",
+    "directory": "packages/@kuaizi/vue-cli-plugin-i18n"
+  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
