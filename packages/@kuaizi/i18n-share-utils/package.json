@@ -1,6 +1,6 @@
 {
   "name": "@kuaizi/i18n-share-utils",
-  "version": "1.0.1-alpha.2",
+  "version": "1.0.1-alpha.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,6 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "b9585fedaaa8685e4f03dd0d1b982e60b3a9a1e8"
 }

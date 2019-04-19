@@ -1,6 +1,6 @@
 {
   "name": "@kuaizi/webpack-plugin-vue-i18n",
-  "version": "1.0.1-alpha.2",
+  "version": "1.0.1-alpha.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,11 +18,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@kuaizi/i18n-share-utils": "^1.0.1-alpha.2",
+    "@kuaizi/i18n-share-utils": "^1.0.1-alpha.3",
     "chalk": "^2.4.2",
     "fs-extra": "^7.0.1"
   },
   "devDependencies": {
     "webpack": "^4.30.0"
-  }
+  },
+  "gitHead": "b9585fedaaa8685e4f03dd0d1b982e60b3a9a1e8"
 }
