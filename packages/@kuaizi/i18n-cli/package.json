@@ -1,5 +1,5 @@
 {
-  "name": "@kuaizi/i18n-share-utils",
+  "name": "@kuaizi/i18n-cli",
   "version": "1.0.1-alpha.0",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "tomieric <tomieric@gmail.com>",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  }
+  "license": "MIT"
 }

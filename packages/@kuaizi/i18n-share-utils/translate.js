@@ -4,7 +4,6 @@ function getTranslateKey (source) {
   let matchKey
 
   while (matchKey = reg.exec(source)) {
-    console.log(matchKey[2])
     result[matchKey[2]] = matchKey[2]
   }
 

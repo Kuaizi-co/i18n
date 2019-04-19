@@ -1,29 +1,46 @@
 # @kuaizi/i18n
 
-* `i18n-cli`
+> 作为一个具有国际业务的Sass供应商，多语言是最基本的刚需，如何方便保持页面维护和支持多语言，由最初的直接用中文作为key值思路，`@veici` 最早实现的 `i18n-placeholder-loader`，衍生去整合我们的多语言工具链
+
+**包含的工具：**
+
 * `i18n-loader`
 * `vue-cli-plugin-i18n`
 * `webpack-plugin-i18n`
+* `i18n-cli`
+* `i18n-vsc`
 
-## i18n-cli
-
-提供一键翻译 `excel` 文件
-
-## i18n-loader
+## vue-i18n-loader
 
 > 参考 [i18n-placeholder-loader](https://github.com/veici/i18n-placeholder-loader)
 
 自动替换占位符
 
-[使用文档](./packages/@kuaizi/i18n-loader/README.md)
+[使用文档](./packages/%40kuaizi/i18n-loader/README.md)
 
 ## vue-cli-plugin-i18n
 
 vue-cli3.x插件，注入配置 `i18n-loader`
 
+[使用文档](./packages/%40kuaizi/vue-cli-plugin-i18n/README.md)
+
 ## webpack-plugin-i18n
 
 i18n-loader的插件版本，在build才替换
+
+[使用文档](./packages/%40kuaizi/webpack-plugin-vue-i18n/README.md)
+
+## i18n-cli
+
+提供一键翻译 `excel` 文件
+
+[使用文档](./packages/%40kuaizi/i18n-cli/README.md)
+
+## i18n-vsc
+
+提供i18n扩展的vscode快捷键
+
+[使用文档](./packages/%40kuaizi/i18n-vsc/README.md)
 
 ## Test 自动化测试
 

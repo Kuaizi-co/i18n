@@ -4,6 +4,7 @@
  */
 const path = require('path')
 const fs = require('fs-extra')
+const chalk = require('chalk')
 const getTranslateKey = require('@kuaizi/i18n-share-utils/translate')
 const pluginName = Symbol('webpackPluginVueI18n')
 const rawArgs = process.argv.slice(2)
@@ -14,6 +15,7 @@ class webpackPluginVueI18n {
     output = './src/i18n/zh-CN.js'
   } = {}) {
     this.output = output
+    this.file = path.resolve(process.cwd(), this.output)
     this.enabled = !!~rawArgs.indexOf('--i18n') || !!~rawArgs.indexOf('--debug')
     this.__cache = {}
   }
@@ -27,17 +29,12 @@ class webpackPluginVueI18n {
   }
 
   writeTranslateKeyFile () {
-    const file = path.resolve(process.cwd(), this.output)
+    const file = this.file
     let content = JSON.stringify(this.__cache, null, 2)
-
-    console.log(file)
-    console.log('////////////////////')
 
     if (fs.existsSync(file)) {
       const fileContent = fs.readFileSync(file, 'utf8')
-      console.log(fileContent)
-      console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-      content = fileContent.replace(/\/\*\s?i18n\s?\*\/([^\/]*)\/\*\s?i18n\s?end\s?\*\//gm, `/* i18n */${content}/* i18n end */`)
+      content = fileContent.replace(/\/\*\s?i18n\s?\*\/([^\*]*)\/\*\s?i18n\s?end\s?\*\//gm, `/* i18n */${content}/* i18n end */`)
     } else {
       content = `export default /* i18n */${content}/* i8n end */`
     }
@@ -72,7 +69,10 @@ class webpackPluginVueI18n {
 
       // write file
       this.writeTranslateKeyFile()
-      console.log('i18n 配置生成完成')
+      console.log()
+      console.log()
+      console.log(chalk.green(`i18n 配置生成完成, 请查看 ${this.file}`))
+      console.log()
 
       callback()
     }
