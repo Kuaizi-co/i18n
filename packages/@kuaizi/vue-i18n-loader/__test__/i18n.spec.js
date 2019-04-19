@@ -18,6 +18,10 @@ describe('test pattern', () => {
     {
       source: `test: '::测试::'`,
       result: `test: this.$t('测试', {})`
+    },
+    {
+      source: `::测试 {ok}::`,
+      result: `{{$t('测试 {ok}', {})}}`
     }
   ]
 
@@ -37,6 +41,10 @@ describe('test pattern', () => {
     {
       source: `test: '::测试 {ok}::{ok: 1}'`,
       result: `test: this.$t('测试 {ok}', {ok: 1})`
+    },
+    {
+      source: `::测试 {ok}::{ok: 1}`,
+      result: `{{$t('测试 {ok}', {ok: 1})}}`
     }
   ]
 

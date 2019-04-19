@@ -14,5 +14,9 @@ module.exports = [
   {
     pattern: /(\w+):\s*'::([^::]+)::({(.+)})?'/gm,
     replacement: `$1: this.$t('$2', {$4})`
+  },
+  {
+    pattern: /\s?::([^::]+)::({(.+)})?\s?/gm,
+    replacement: `{{$t('$1', {$3})}}`
   }
 ]

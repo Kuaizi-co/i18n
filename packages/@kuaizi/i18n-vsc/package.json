@@ -2,7 +2,7 @@
     "name": "i18n-vsc",
     "displayName": "i18n-vsc",
     "description": "vue-i18n keymap",
-    "version": "1.0.1-alpha.0",
+    "version": "1.0.1-alpha.2",
     "engines": {
         "vscode": "^1.33.0"
     },
@@ -10,9 +10,9 @@
         "Keymaps"
     ],
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Kuaizi-co/i18n.git",
-      "directory": "packages/@kuaizi/i18n-vsc"
+        "type": "git",
+        "url": "git+https://github.com/Kuaizi-co/i18n.git",
+        "directory": "packages/@kuaizi/i18n-vsc"
     },
     "contributes": {
         "keybindings": [

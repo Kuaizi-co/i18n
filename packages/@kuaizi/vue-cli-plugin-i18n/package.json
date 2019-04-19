@@ -1,6 +1,6 @@
 {
   "name": "@kuaizi/vue-cli-plugin-i18n",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.1-alpha.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@kuaizi/vue-i18n-loader": "^1.0.1-alpha.0",
-    "@kuaizi/webpack-plugin-vue-i18n": "^1.0.1-alpha.0",
+    "@kuaizi/vue-i18n-loader": "^1.0.1-alpha.2",
+    "@kuaizi/webpack-plugin-vue-i18n": "^1.0.1-alpha.2",
     "i18n-placeholder-loader": "^0.1.7"
   }
 }
