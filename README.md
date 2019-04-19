@@ -16,31 +16,31 @@
 
 自动替换占位符
 
-[使用文档](./packages/%40kuaizi/i18n-loader/README.md)
+[使用文档](./packages/@kuaizi/vue-i18n-loader/README.md)
 
 ## vue-cli-plugin-i18n
 
 vue-cli3.x插件，注入配置 `i18n-loader`
 
-[使用文档](./packages/%40kuaizi/vue-cli-plugin-i18n/README.md)
+[使用文档](./packages/@kuaizi/vue-cli-plugin-i18n/README.md)
 
 ## webpack-plugin-i18n
 
 i18n-loader的插件版本，在build才替换
 
-[使用文档](./packages/%40kuaizi/webpack-plugin-vue-i18n/README.md)
+[使用文档](./packages/@kuaizi/webpack-plugin-vue-i18n/README.md)
 
 ## i18n-cli
 
 提供一键翻译 `excel` 文件
 
-[使用文档](./packages/%40kuaizi/i18n-cli/README.md)
+[使用文档](./packages/@kuaizi/i18n-cli/README.md)
 
 ## i18n-vsc
 
 提供i18n扩展的vscode快捷键
 
-[使用文档](./packages/%40kuaizi/i18n-vsc/README.md)
+[使用文档](./packages/@kuaizi/i18n-vsc/README.md)
 
 ## Test 自动化测试
 
@@ -53,4 +53,17 @@ i18n-loader的插件版本，在build才替换
 
 # 测试多个模块
 > yarn test i18n-loader,i18n-cli
+```
+
+## publish
+
+```bash
+# 打版本
+> npx lerna version prerelease --amend --conventional-commits
+# 发布
+> npx lerna publish
+# 预发版
+> npx lerna publish --canary
+# 发布下一个版本
+> npx lerna publish --dist-tag next
 ```
