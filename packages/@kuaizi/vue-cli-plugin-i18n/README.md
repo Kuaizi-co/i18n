@@ -17,7 +17,7 @@
 > yarn i18n
 ```
 
-## 配置
+## 配置启用插件
 
 ### package.json
 
@@ -28,6 +28,20 @@
     "webpack": true,
     // 配置使用loader支持，['@kuaizi/vue-i18n-loader', 'i18n-placeholder-loader']
     "loader": "i18n-placeholder-loader"
+  }
+}
+```
+
+## 插件参数配置
+
+### vue.config.js
+
+```
+module.exports = {
+  pluginOptions: {
+    "vue-i18n": {
+      output: "./src/i18n/newZH.js"
+    }
   }
 }
 ```
