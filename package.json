@@ -49,7 +49,9 @@
   "changelog": {
     "labels": {
       "feature": "New Feature",
-      "bug": "Bug Fix"
+      "bug": "Bug Fix",
+      "doc": "Refine Doc",
+      "feat": "New Feature"
     }
   }
 }
