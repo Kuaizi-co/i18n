@@ -61,9 +61,9 @@ i18n-loader的插件版本，在build才替换
 # 打版本
 > npx lerna version prerelease --amend --conventional-commits
 # 发布
-> npx lerna publish
+> npx lerna publish --force-publish --yes
 # 预发版
-> npx lerna publish --canary
+> npx lerna publish --canary --force-publish --yes
 # 发布下一个版本
-> npx lerna publish --dist-tag next
+> npx lerna publish --dist-tag next --force-publish --yes
 ```
