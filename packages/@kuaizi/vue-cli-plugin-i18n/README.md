@@ -16,3 +16,18 @@
 # 执行生成中文键值对照文件
 > yarn i18n
 ```
+
+## 配置
+
+### package.json
+
+```js
+{
+  "vue-cli-i18n": {
+    // 开启 @kuaizi/webpack-plugin-vue-i18n
+    "webpack": true,
+    // 配置使用loader支持，['@kuaizi/vue-i18n-loader', 'i18n-placeholder-loader']
+    "loader": "i18n-placeholder-loader"
+  }
+}
+```
