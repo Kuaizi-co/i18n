@@ -6,7 +6,7 @@
 
 ```js
 const resolve = require('path').resolve
-const webpackPluginVueI18n = require('../../index')
+const webpackPluginVueI18n = require('@kuaizi/webpack-plugin-vue-i18n')
 
 module.exports = {
   entry: resolve(__dirname, 'test.js'),
