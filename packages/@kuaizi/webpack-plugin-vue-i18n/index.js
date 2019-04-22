@@ -8,14 +8,18 @@ const chalk = require('chalk')
 const getTranslateKey = require('@kuaizi/i18n-share-utils/translate')
 const pluginName = Symbol('webpackPluginVueI18n')
 const rawArgs = process.argv.slice(2)
+const resolve = f => path.resolve(process.cwd(), f)
 
 class webpackPluginVueI18n {
   constructor ({
     // 输出文件
-    output = './src/i18n/zh-CN.js'
+    output = [
+      './src/i18n/zh-CN.js',
+      './src/i18n/en-US.js'
+    ]
   } = {}) {
-    this.output = output
-    this.file = path.resolve(process.cwd(), this.output)
+    this.output = Array.isArray(output) ? output : [output]
+    // this.file = path.resolve(process.cwd(), this.output)
     this.enabled = !!~rawArgs.indexOf('--i18n') || !!~rawArgs.indexOf('--debug')
     this.__cache = {}
   }
@@ -29,17 +33,20 @@ class webpackPluginVueI18n {
   }
 
   writeTranslateKeyFile () {
-    const file = this.file
+    // const file = this.file
     let content = JSON.stringify(this.__cache, null, 2)
 
-    if (fs.existsSync(file)) {
-      const fileContent = fs.readFileSync(file, 'utf8')
-      content = fileContent.replace(/\/\*\s?i18n\s?\*\/([^\*]*)\/\*\s?i18n\s?end\s?\*\//gm, `/* i18n */${content}/* i18n end */`)
-    } else {
-      content = `export default /* i18n */${content}/* i8n end */`
-    }
+    this.output.forEach(f => {
+      const file = resolve(f)
+      if (fs.existsSync(file)) {
+        const fileContent = fs.readFileSync(file, 'utf8')
+        content = fileContent.replace(/\/\*\s?i18n\s?\*\/([^\*]*)\/\*\s?i18n\s?end\s?\*\//gm, `/* i18n */${content}/* i18n end */`)
+      } else {
+        content = `export default /* i18n */${content}/* i8n end */`
+      }
 
-    fs.outputFileSync(file, content)
+      fs.outputFileSync(file, content)
+    })
   }
 
   apply (compiler) {
