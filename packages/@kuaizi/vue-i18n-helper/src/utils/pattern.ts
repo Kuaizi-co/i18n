@@ -1,7 +1,7 @@
 export default [
   {
     pattern: />\s*([\u4e00-\u9fa5]+)\s*</gm,
-    replacement: '>{{ $t("$1") }}<',
+    replacement: '>{{ $t(\'$1\') }}<',
   },
   {
     pattern: /([\w\-]+)="([\u4e00-\u9fa5]+)"/gm,

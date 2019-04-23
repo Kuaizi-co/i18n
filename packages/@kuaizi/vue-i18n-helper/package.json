@@ -3,7 +3,7 @@
 	"displayName": "@kuaizi/vue-i18n-helper",
 	"description": "vue-i18n 辅助插件",
 	"publisher": "kuaizi",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
@@ -17,10 +17,10 @@
 		"onLanguage:vue-html",
 		"onCommand:extension.kzVueI18n"
 	],
-	"homepage": "https://github.com/Kuaizi-co/i18n/tree/dev/packages/@kuaizi/i18n-vsc",
+	"homepage": "https://github.com/Kuaizi-co/i18n/tree/master/packages/@kuaizi/vue-i18n-helper",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Kuaizi-co/i18n.git",
+		"url": "https://github.com/Kuaizi-co/i18n.git",
 		"directory": "packages/@kuaizi/i18n-vsc"
 	},
 	"main": "./out/extension.js",
