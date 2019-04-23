@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1-alpha.5](https://github.com/Kuaizi-co/i18n/compare/v1.0.1-alpha.3...v1.0.1-alpha.5) (2019-04-23)
+
+
+### Features
+
+* **webpack-plugin-vue-i18n:** 增加支持多文件回写 ([ca48460](https://github.com/Kuaizi-co/i18n/commit/ca48460))
+
+
+
+
+
+
 ## [1.0.1-alpha.3](https://github.com/Kuaizi-co/i18n/compare/v1.0.1-alpha.2...v1.0.1-alpha.3) (2019-04-19)
 
 
