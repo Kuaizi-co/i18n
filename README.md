@@ -8,7 +8,7 @@
 * `vue-cli-plugin-i18n`
 * `webpack-plugin-i18n`
 * `i18n-cli`
-* `i18n-vsc`
+* `vue-i18n-helper`
 
 ## vue-i18n-loader
 
@@ -36,11 +36,11 @@ i18n-loader的插件版本，在build才替换
 
 [使用文档](./packages/@kuaizi/i18n-cli/README.md)
 
-## i18n-vsc
+## vue-i18n-helper
 
 提供i18n扩展的vscode快捷键
 
-[使用文档](./packages/@kuaizi/i18n-vsc/README.md)
+[使用文档](./packages/@kuaizi/vue-i18n-helper/README.md)
 
 ## Test 自动化测试
 

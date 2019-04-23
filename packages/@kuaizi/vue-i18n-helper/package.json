@@ -1,0 +1,70 @@
+{
+	"name": "vue-i18n-helper",
+	"displayName": "@kuaizi/vue-i18n-helper",
+	"description": "vue-i18n 辅助插件",
+	"publisher": "kuaizi",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+  ],
+  "preview": true,
+  "icon": "static/logo.png",
+	"activationEvents": [
+		"onLanguage:vue",
+		"onLanguage:vue-html",
+		"onCommand:extension.kzVueI18n"
+  ],
+  "homepage": "https://github.com/Kuaizi-co/i18n/tree/dev/packages/@kuaizi/i18n-vsc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kuaizi-co/i18n.git",
+    "directory": "packages/@kuaizi/i18n-vsc"
+  },
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.kzVueI18n",
+				"title": "$t",
+				"category": "@kuaizi"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "extension.kzVueI18n",
+					"when": "editorHasSelection"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"key": "Ctrl+t",
+				"mac": "cmd+t",
+				"command": "extension.kzVueI18n",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "yarn run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"global": "^4.3.2",
+		"vsce": "^1.59.0"
+	}
+}
