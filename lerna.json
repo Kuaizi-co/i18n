@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/@kuaizi/*"
+    "packages/@kuaizi/*",
+    "!packages/@kuaizi/vue-i18n-helper"
   ],
   "version": "1.0.1-alpha.4"
 }
