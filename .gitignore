@@ -110,5 +110,4 @@ packages/test
 package-lock.json
 yarn.lock
 
-src/
 packages/test
