@@ -12,17 +12,9 @@ We provide shortcuts for writing vue-i18n, Select the text and use CTRL +T, You 
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 0.0.1
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Added features `Ctrl+T` to convert `vue-i18n` gammer and command `@kuaizi/$t`.
 
 -----------------------------------------------------------------------------------------------------------
 

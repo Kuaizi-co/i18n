@@ -9,20 +9,20 @@
 	},
 	"categories": [
 		"Other"
-  ],
-  "preview": true,
-  "icon": "static/logo.png",
+	],
+	"preview": true,
+	"icon": "static/logo.png",
 	"activationEvents": [
 		"onLanguage:vue",
 		"onLanguage:vue-html",
 		"onCommand:extension.kzVueI18n"
-  ],
-  "homepage": "https://github.com/Kuaizi-co/i18n/tree/dev/packages/@kuaizi/i18n-vsc",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kuaizi-co/i18n.git",
-    "directory": "packages/@kuaizi/i18n-vsc"
-  },
+	],
+	"homepage": "https://github.com/Kuaizi-co/i18n/tree/dev/packages/@kuaizi/i18n-vsc",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Kuaizi-co/i18n.git",
+		"directory": "packages/@kuaizi/i18n-vsc"
+	},
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
