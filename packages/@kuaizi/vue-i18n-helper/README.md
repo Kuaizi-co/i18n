@@ -18,8 +18,4 @@ Added features `Ctrl+T` to convert `vue-i18n` gammer and command `@kuaizi/$t`.
 
 -----------------------------------------------------------------------------------------------------------
 
-### For more information
-
-* [@kuaizi/i18n-vsc](//github.com/Kuaizi-co/i18n/tree/dev/packages/%40kuaizi/i18n-vsc)
-
 **Enjoy!**
