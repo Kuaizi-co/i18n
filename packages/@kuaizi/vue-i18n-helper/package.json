@@ -3,7 +3,7 @@
 	"displayName": "@kuaizi/vue-i18n-helper",
 	"description": "vue-i18n 辅助插件",
 	"publisher": "kuaizi",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
