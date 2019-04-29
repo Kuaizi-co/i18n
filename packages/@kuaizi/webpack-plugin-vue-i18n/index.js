@@ -38,14 +38,15 @@ class webpackPluginVueI18n {
 
     this.output.forEach(f => {
       const file = resolve(f)
+      let newContent
       if (fs.existsSync(file)) {
         const fileContent = fs.readFileSync(file, 'utf8')
-        content = fileContent.replace(/\/\*\s?i18n\s?\*\/([^\*]*)\/\*\s?i18n\s?end\s?\*\//gm, `/* i18n */${content}/* i18n end */`)
+        newContent = fileContent.replace(/\/\*\s?i18n\s?\*\/([^\*]*)\/\*\s?i18n\s?end\s?\*\//gm, `/* i18n */${content}/* i18n end */`)
       } else {
-        content = `export default /* i18n */${content}/* i8n end */`
+        newContent = `export default /* i18n */${content}/* i8n end */`
       }
 
-      fs.outputFileSync(file, content)
+      fs.outputFileSync(file, newContent)
     })
   }
 

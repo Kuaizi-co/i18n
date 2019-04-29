@@ -1,6 +1,6 @@
 {
   "name": "@kuaizi/vue-i18n-loader",
-  "version": "1.0.1-alpha.3",
+  "version": "1.0.3",
   "description": "i18n-loader",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@kuaizi/i18n-share-utils": "^1.0.1-alpha.3"
+    "@kuaizi/i18n-share-utils": "^1.0.3"
   },
   "gitHead": "b9585fedaaa8685e4f03dd0d1b982e60b3a9a1e8"
 }
