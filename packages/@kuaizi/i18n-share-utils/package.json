@@ -1,6 +1,6 @@
 {
   "name": "@kuaizi/i18n-share-utils",
-  "version": "1.0.1-alpha.3",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {

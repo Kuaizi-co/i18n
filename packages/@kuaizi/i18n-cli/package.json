@@ -1,6 +1,6 @@
 {
   "name": "@kuaizi/i18n-cli",
-  "version": "1.0.1-alpha.3",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,5 +17,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "b9585fedaaa8685e4f03dd0d1b982e60b3a9a1e8"
+  "gitHead": "b9585fedaaa8685e4f03dd0d1b982e60b3a9a1e8",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0"
+  }
 }

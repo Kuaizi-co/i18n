@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/Kuaizi-co/i18n/compare/v1.0.1...v1.0.3) (2019-04-29)
+
+**Note:** Version bump only for package @kuaizi/vue-i18n-loader
+
+
+
+
+
+
 ## [1.0.1-alpha.3](https://github.com/Kuaizi-co/i18n/compare/v1.0.1-alpha.2...v1.0.1-alpha.3) (2019-04-19)
 
 
