@@ -69,5 +69,6 @@
 	},
 	"publishConfig": {
 		"allow-same-version": true
-	}
+	},
+	"gitHead": "f292376eaf525e4eb660c33e3a4d9bec55f4660f"
 }
