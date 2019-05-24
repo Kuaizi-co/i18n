@@ -10,12 +10,11 @@ class Translate {
     this.into();
   }
 
-  public getWords (): string {
+  public getWords (selection: vscode.Selection): string {
     const editor = this._getEditor();
     if (!editor) {
       return '';
     }
-    let selection = editor.selection;
     let text = editor.document.getText(selection);
     return text || '';
   }
@@ -28,31 +27,35 @@ class Translate {
     return editor;
   }
 
-  public showInfoMessge (msg: string): any {
+  public showInfoMessage (msg: string): any {
     vscode.window.showInformationMessage('hello '+ msg);
   }
 
   public into (): any {
     const editor = this._getEditor();
-    let text = this.getWords();
+    const selections = editor.selections
+    let text: String;
 
-    if (!editor) {
-      this.showInfoMessge('未选中文字！');
-    }
-    
-    pattern.find(p => {
-      const result = p.pattern.test(text);
-      if (result) {
-        text = text.replace(p.pattern, p.replacement);
-      }
-      return result;
-    });
+    if (!editor) return this.showInfoMessage('Unselected text!');
 
     editor.edit((editBuilder: any) => {
-      editBuilder.replace(
-        new vscode.Range(editor.selection.start, editor.selection.end),
-        text
-      );
+      selections.forEach((selection: vscode.Selection) => {
+        // Get SingleLine Text
+        text = this.getWords(selection);
+        // Replace text
+        pattern.find((p: any) => {
+          const result = p.pattern.test(text);
+          if (result) {
+            text = text.replace(p.pattern, p.replacement);
+          }
+          return result
+        });
+        // Replace editor text
+        editBuilder.replace(
+          new vscode.Range(selection.start, selection.end),
+          text
+        );
+      })
     });
   }
 }

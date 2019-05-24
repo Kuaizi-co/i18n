@@ -1,18 +1,18 @@
 export default [
   {
-    pattern: />\s*([\u4e00-\u9fa5]+)\s*</gm,
+    pattern: />\s*(.+)\s*</gm,
     replacement: '>{{ $t(\'$1\') }}<',
   },
   {
-    pattern: /([\w\-]+)="([\u4e00-\u9fa5]+)"/gm,
-    replacement: '\:$1="$t(\'$2\')"',
+    pattern: /([\w\-]+)=("|')(.+)("|')/gm,
+    replacement: '\:$1="$t(\'$3\')"',
   },
   {
-    pattern: /default:\s*'([\u4e00-\u9fa5]+)'/gm,
+    pattern: /default:\s*'(.+)'/gm,
     replacement: "default() { return this.$t('$1') }",
   },
   {
-    pattern: /(\w+):\s*'([\u4e00-\u9fa5]+)'/gm,
+    pattern: /(\w+):\s*'(.+)'/gm,
     replacement: "$1: this.$t('$2')",
   },
   {
