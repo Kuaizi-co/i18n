@@ -68,7 +68,7 @@ class Translate {
             end.line,
             start.character + index + text.length
           )
-        );
+        )
       })
     });
 
