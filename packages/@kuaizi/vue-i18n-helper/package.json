@@ -3,7 +3,7 @@
 	"displayName": "@kuaizi/vue-i18n-helper",
 	"description": "vue-i18n 辅助插件",
 	"publisher": "kuaizi",
-	"version": "1.1.2",
+	"version": "1.3.3",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
@@ -15,7 +15,8 @@
 	"activationEvents": [
 		"onLanguage:vue",
 		"onLanguage:vue-html",
-		"onCommand:extension.kzVueI18n"
+		"onCommand:extension.kzVueI18n",
+		"onCommand:extension.kzVueI18nBlock"
 	],
 	"homepage": "https://github.com/Kuaizi-co/i18n/tree/master/packages/@kuaizi/vue-i18n-helper",
 	"repository": {
@@ -30,12 +31,21 @@
 				"command": "extension.kzVueI18n",
 				"title": "$t",
 				"category": "@kuaizi"
+			},
+			{
+				"command": "extension.kzVueI18nBlock",
+				"title": "$i",
+				"category": "@kuaizi"
 			}
 		],
 		"menus": {
 			"commandPalette": [
 				{
 					"command": "extension.kzVueI18n",
+					"when": "editorHasSelection"
+				},
+				{
+					"command": "extension.kzVueI18nBlock",
 					"when": "editorHasSelection"
 				}
 			]
@@ -45,6 +55,12 @@
 				"key": "Ctrl+t",
 				"mac": "cmd+t",
 				"command": "extension.kzVueI18n",
+				"when": "editorTextFocus"
+			},
+			{
+				"key": "Ctrl+i",
+				"mac": "cmd+i",
+				"command": "extension.kzVueI18nBlock",
 				"when": "editorTextFocus"
 			}
 		]
