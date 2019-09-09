@@ -63,13 +63,18 @@ class Translate {
         );
 
         // Set new selection position
-        const index = replaceText.indexOf(text);
+        const matchTexts = /\$t\(('|")(.*)('|")\)/g.exec(replaceText);
+        // key text
+        const originalText = matchTexts && matchTexts[2] ? matchTexts[2] : text;
+        // like title="title", must be select the last 'title'
+        const index = replaceText.lastIndexOf(originalText);
+
         newSelections.push(
           new vscode.Selection(
             start.line,
             start.character + index,
             end.line,
-            start.character + index + text.length
+            start.character + index + originalText.length
           )
         );
       });
