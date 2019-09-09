@@ -33,12 +33,14 @@ class Translate {
 
   public into (): any {
     const editor = this._getEditor();
-    const selections = editor.selections
+    const selections = editor.selections;
     const newSelections: vscode.Selection[] = [];
     let text: string;
     let replaceText: string;
 
-    if (!editor) return this.showInfoMessage('Unselected text!');
+    if (!editor) {
+      return this.showInfoMessage('Unselected text!');
+    }
 
     editor.edit((editBuilder: any) => {
       selections.forEach((selection: vscode.Selection) => {
@@ -68,8 +70,8 @@ class Translate {
             end.line,
             start.character + index + text.length
           )
-        )
-      })
+        );
+      });
     });
 
     // Reset to select old text

@@ -11,7 +11,8 @@ export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "kzVueI18n" is now active!');
 
   [
-    require('./translate').default
+    require('./translate').default,
+    require('./custom-block').default
   ].forEach(module => context.subscriptions.push(module(context)));
 }
 
