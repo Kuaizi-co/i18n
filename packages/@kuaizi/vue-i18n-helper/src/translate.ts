@@ -49,11 +49,12 @@ class Translate {
         // Get SingleLine Text
         text = this.getWords(selection);
         // Replace text
-        pattern.forEach((p: any) => {
+        pattern.find((p: any) => {
           const result = p.pattern.test(text);
           if (result) {
             replaceText = text.replace(p.pattern, p.replacement);
           }
+          return result;
         });
         // Replace editor text
         editBuilder.replace(
